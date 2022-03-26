@@ -32,9 +32,31 @@ function random(state = {
     }
 }
 
+function crud(state = {
+    lista: []
+}, action) {
+    switch (action.type)
+    {
+        case "crud-get": {
+            // Devuelvo los datos tal como los recibo
+            console.log("GET", action.data);
+            return { lista: action.data }
+        }
+        case "crud-post": {
+            
+        }
+        case "crud-delete": {
+            console.log("DELETE", action);
+            return state;
+        }
+        
+        default: return state
+    }
+}
+
 
 const rootReducer = combineReducers({
-    view, random
+    view, random, crud
 })
 
 export default rootReducer

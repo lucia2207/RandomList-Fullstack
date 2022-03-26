@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
-import From from '../components/From'
+import Form from '../components/Form'
 import Result from '../components/Result'
 
 class App extends Component {// component stateful
   render() {
+
     return (
-      <div>
-        <h3>Lista Random</h3>
-        <p>Sistema Ramdom - Demo</p>
-        <From />
+      <div class="container-fluid">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <h3>Lista Random</h3>
+            <p>Sistema Ramdom - Demo</p>
+          </div>
+        </div>
+        <Form />
         <Result />
       </div>
     )

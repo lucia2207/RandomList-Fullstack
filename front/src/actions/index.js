@@ -17,5 +17,25 @@ export const fetchRandom = (state) => (dispatch) => {
         })
 }
 
+ //GET
+ export const prueba = (state) => (dispatch) => {
 
-//TODO: agregar las demas acciones
+    dispatch({ type: "view-loading" });
+
+    return fetch(`http://localhost:8080/r`, {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(response => response.json())
+      .then(json => {
+          dispatch({ type: "crud-get", data: json });
+          dispatch({ type: "view-loaded" });
+        })
+
+ }
+
+//DELETE
+export const borrar = (state) => (dispatch) => {
+    dispatch({ type: "crud-delete" });
+}
