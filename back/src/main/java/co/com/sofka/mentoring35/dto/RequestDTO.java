@@ -1,4 +1,4 @@
-package co.com.sofka.mentoring35;
+package co.com.sofka.mentoring35.dto;
 
 public class RequestDTO {
     private String list;
